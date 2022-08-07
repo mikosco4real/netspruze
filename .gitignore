@@ -132,3 +132,6 @@ dmypy.json
 local.py
 .env.local
 .env.prod
+
+/media
+/static

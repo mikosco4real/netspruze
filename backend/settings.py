@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'backend.products',
     'backend.users',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -132,6 +140,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
+
+MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
