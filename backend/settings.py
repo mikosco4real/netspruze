@@ -127,11 +127,12 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "https://netspruze.com",
-    "https://netspruze.com/",
+    "https://netspruze.com",
     "http://netspruze.com",
-    "http://netspruze.com/",
+    "http://netspruze.com",
     "http://localhost",
     "http://localhost:3000",
+    "http://localhost:4000",
 ]
 
 # Internationalization
